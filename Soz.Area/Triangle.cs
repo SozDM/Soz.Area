@@ -7,9 +7,9 @@ namespace Soz.Area
 {
     public class Triangle
     {
-        public int X { get; }
-        public int Y { get; }
-        public int Z { get; }
+        private int X { get; }
+        private int Y { get; }
+        private int Z { get; }
 
         public Triangle(int x, int y, int z)
         {
@@ -27,6 +27,10 @@ namespace Soz.Area
             {
                 throw new ArgumentException( $"Такой треугольник не существует. {x} + {y} <= {z}");
             }
+
+            X = x;
+            Y = y;
+            Z = z;
         }
 
         public double GetArea()

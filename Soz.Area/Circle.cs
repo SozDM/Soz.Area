@@ -5,11 +5,17 @@ namespace Soz.Area
 {
     public class Circle
     {
-        public int X { get; }
-        
-        public double GetArea()
+        private int X { get; }
+
+        public Circle(int x)
         {
-            double S = 3.14 * X;
+            X = x;
+        }
+        
+        public double GetArea(int AfterDot)
+        {
+            double S = Math.PI * X;
+            S = Math.Round(S, AfterDot); 
             return S;
         }
     }
